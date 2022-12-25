@@ -58,7 +58,7 @@ export default function ContactForm({ buttonLabel }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    console.log(name, email, phone.replace(/\D/g, ''), category);
+    // console.log(name, email, phone.replace(/\D/g, ''), category);
   }
 
   return (

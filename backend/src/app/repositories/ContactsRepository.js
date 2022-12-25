@@ -1,6 +1,7 @@
 const db = require('../../database');
 
 class ContactsRepository {
+
   async findAll(order = 'ASC') {
     const direction = order.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
     const rows = await db.query(`
