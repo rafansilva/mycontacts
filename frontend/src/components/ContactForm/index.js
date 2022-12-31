@@ -1,20 +1,20 @@
 // Import Libraries
-import PropTypes from 'prop-types';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 // Import Utils
 import isEmailValid from '../../utils/isEmailValid';
 import formatPhone from '../../utils/formatPhone';
 import useErrors from '../../hooks/useErrors';
 
-// Import Styles
-import { Form, ButtonContainer } from './styles';
-
 // Import Components
 import Input from '../Input';
 import Select from '../Select';
 import FormGroup from '../FormGroup';
 import Button from '../Button';
+
+// Import Styles
+import { Form, ButtonContainer } from './styles';
 
 export default function ContactForm({ buttonLabel }) {
   const [name, setName] = useState('');
