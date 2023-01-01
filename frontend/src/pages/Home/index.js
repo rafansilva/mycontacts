@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 // Import Components
 import Loader from '../../components/Loader';
 
+// Import Services
+import ContactsService from '../../services/ContactsService';
+
 // Import Utils
-import delay from '../../utils/delay';
 
 // Import Styles
 import {
@@ -33,12 +35,9 @@ export default function Home() {
       try {
         setIsLoading(true);
 
-        const response = await fetch(`http://localhost:3001/contacts?orderBy=${orderBy}`);
+        const contactsList = await ContactsService.listContacts(orderBy);
 
-        await delay(500);
-
-        const json = await response.json();
-        setContacts(json);
+        setContacts(contactsList);
       } catch (error) {
         console.log('error: ', error);
       } finally {
