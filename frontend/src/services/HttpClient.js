@@ -9,15 +9,15 @@ class HttpClient {
   get(path, options) {
     return this.makeRequest(path, {
       method: 'GET',
-      headers: options.headers,
+      headers: options?.headers,
     });
   }
 
   post(path, options) {
     return this.makeRequest(path, {
       method: 'POST',
-      body: options.body,
-      headers: options.headers,
+      body: options?.body,
+      headers: options?.headers,
     });
   }
 
